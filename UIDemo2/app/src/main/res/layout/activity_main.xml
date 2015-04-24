@@ -6,7 +6,6 @@
     tools:context=".MainActivity"
     tools:ignore="MergeRootFrame"
 
-
     >
 
     <Button

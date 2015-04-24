@@ -35,10 +35,9 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
         setContentView(R.layout.activity_main);
         if (savedInstanceState != null) {
 
+
             message = savedInstanceState.getString("message");
         }
-
-
 
         ActionBar actionBar = getActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
@@ -150,8 +149,6 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
             secondList.setRetainInstance(true);
             ft.commit();
         }
-
-
     }
 
     @Override

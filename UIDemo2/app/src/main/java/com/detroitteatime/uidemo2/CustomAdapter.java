@@ -28,13 +28,6 @@ public class CustomAdapter extends BaseAdapter {
 
     }
 
-    public List<RowModel> getData() {
-        return data;
-    }
-
-    public void setData(List<RowModel> data) {
-        this.data = data;
-    }
 
     @Override
     public View getView(final int i, View view, ViewGroup viewGroup) {
@@ -44,6 +37,7 @@ public class CustomAdapter extends BaseAdapter {
             holder = new Holder();
             holder.rb = (RatingBar)rowView.findViewById(R.id.ratingBar);
             holder.tv = (TextView)rowView.findViewById(R.id.rowLabel);
+            rowView.setTag(holder);
 
             RatingBar.OnRatingBarChangeListener l=
                     new RatingBar.OnRatingBarChangeListener() {
@@ -52,12 +46,10 @@ public class CustomAdapter extends BaseAdapter {
                             data.get(i).setStars(rating);
                         }
                     };
-
-
         }
-
         //fill row with data
         RowModel rm = data.get(i);
+        holder = (Holder)rowView.getTag();
         holder.rb.setRating(rm.getStars());
         holder.tv.setText(rm.getText());
 
