@@ -6,7 +6,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Go To Grid Layout"
-        android:id="@+id/button"
+        android:id="@+id/toGrid"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
@@ -14,9 +14,9 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button2"
-        android:layout_above="@id/button"
+        android:text="Enter"
+        android:id="@+id/enter"
+        android:layout_above="@id/toGrid"
         android:layout_alignParentStart="true" />
 
     <EditText
@@ -79,15 +79,34 @@
         android:layout_toRightOf="@id/species"/>
 
     <RadioGroup
+        android:id="@+id/gender"
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
-        android:layout_above="@+id/button"
+        android:layout_above="@+id/enter"
         android:layout_below="@id/spinner">
+
+        <RadioButton
+            android:id="@+id/mermaid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mermaid"/>
+
+        <RadioButton
+            android:id="@+id/merman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Merman"/>
 
 
     </RadioGroup>
 
-
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Not on the job"
+        android:id="@+id/toggleButton"
+        android:layout_below="@+id/spinner"
+        android:layout_alignEnd="@+id/spinner" />
 
 
 </RelativeLayout>

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:columnCount="2"
-    android:rowCount="4">
+    android:rowCount="5">
 
 
     <FrameLayout
@@ -18,7 +18,7 @@
     <FrameLayout
         android:layout_height="@dimen/gridbox"
         android:layout_width="@dimen/gridbox"
-        android:background="#f00"
+        android:background="#0f0"
         android:padding="5dp">
 
     </FrameLayout>
@@ -40,7 +40,16 @@
 
     </FrameLayout>
 
-<!-- For gridlayout params, see http://developer.android.com/reference/android/widget/GridLayout.LayoutParams.html -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To Table Layout"
+        android:id="@+id/next"
+
+
+       />
+
+    <!-- For gridlayout params, see http://developer.android.com/reference/android/widget/GridLayout.LayoutParams.html -->
 
 
 
