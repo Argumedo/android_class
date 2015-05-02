@@ -1,6 +1,5 @@
 package com.detroitteatime.myflickr;
 
-
 import android.app.ListFragment;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -15,7 +14,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 
 /**
@@ -28,7 +26,6 @@ public class FlickerFragment extends Fragment implements AdapterView.OnItemClick
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_layout, container, false);
-
         MainActivity activity = (MainActivity)this.getActivity();
         photos = activity.getmPhotos();
         mTitles = new String[photos.size()];
@@ -57,6 +54,5 @@ public class FlickerFragment extends Fragment implements AdapterView.OnItemClick
         ft.replace(R.id.container, pf);
         ft.addToBackStack("Image");
         ft.commit();
-
     }
 }
