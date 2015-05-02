@@ -1,18 +1,15 @@
 package com.detroitteatime.myflickr;
 
 import android.util.Log;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
 
 /**
  * Created by mark on 4/30/15.
  */
 public class FlickrPhoto {
-
     String id, owner, secret, server, farm, title;
     Boolean isPublic, isFriend, isFamily;
 
@@ -51,7 +48,6 @@ public class FlickrPhoto {
                 + this.id+"_"+this.secret+"_"+opt+".jpg";
         Log.i(Constants.TAG, "Photo url: " + photoURI);
         return photoURI;
-
     }
 
 
