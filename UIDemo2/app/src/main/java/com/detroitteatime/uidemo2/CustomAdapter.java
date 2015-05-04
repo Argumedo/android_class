@@ -46,6 +46,8 @@ public class CustomAdapter extends BaseAdapter {
                             data.get(i).setStars(rating);
                         }
                     };
+        }else{
+            rowView = view;
         }
         //fill row with data
         RowModel rm = data.get(i);
