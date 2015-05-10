@@ -30,6 +30,10 @@ public class FlickerFragment extends Fragment implements AdapterView.OnItemClick
 
         DataBaseHelper dbHelper = new DataBaseHelper(getActivity());
         cursor = dbHelper.getAllRows();
+
+        //will change this later when we use a CursorLoader
+        getActivity().startManagingCursor(cursor);
+
         FlickrPhotoAdapter adapter = new FlickrPhotoAdapter(getActivity(), cursor);
 
         ListView lv =(ListView)view.findViewById(R.id.listView);
@@ -50,6 +54,7 @@ public class FlickerFragment extends Fragment implements AdapterView.OnItemClick
         String server = cursor.getString(cursor.getColumnIndexOrThrow(Contract.PhotoEntry.SERVER));
         String secret = cursor.getString(cursor.getColumnIndexOrThrow(Contract.PhotoEntry.SECRET));
 
+
         // public static String getURL(String farm, String server, String id, String secret, boolean big)
         String url = FlickrPhoto.getURL(farm, server, id, secret, true);
         PhotoFragment pf = new PhotoFragment();
@@ -61,4 +66,11 @@ public class FlickerFragment extends Fragment implements AdapterView.OnItemClick
         ft.addToBackStack("Image");
         ft.commit();
     }
+
+    /**
+     * Called when the Fragment is no longer started.  This is generally
+     * tied to {@link Activity#onStop() Activity.onStop} of the containing
+     * Activity's lifecycle.
+     */
+
 }
