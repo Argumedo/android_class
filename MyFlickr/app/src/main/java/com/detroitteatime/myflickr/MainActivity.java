@@ -70,7 +70,7 @@ public class MainActivity extends ActionBarActivity {
     public void showList() {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
-        ft.add(R.id.container, new FlickerFragment());
+        ft.replace(R.id.container, new FlickerFragment());
         ft.commit();
     }
 
