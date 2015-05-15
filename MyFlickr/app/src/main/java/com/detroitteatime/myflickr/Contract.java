@@ -9,8 +9,10 @@ import android.provider.BaseColumns;
 
 public class Contract{
     public static final String DATABASE_NAME = "myflickr.db";
+    PhotoEntry pe = new PhotoEntry();
 
     public static final class PhotoEntry implements BaseColumns{
+        public int test = 7;
 
         public static final String TABLE_NAME = "photo_entry";
         public static final String OWNER = "owner";

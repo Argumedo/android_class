@@ -22,6 +22,8 @@ import java.util.ArrayList;
  */
 public class FlickerFragment extends Fragment implements AdapterView.OnItemClickListener{
     Cursor cursor;
+    ListView lv;
+    FlickrPhotoAdapter adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -34,14 +36,16 @@ public class FlickerFragment extends Fragment implements AdapterView.OnItemClick
         //will change this later when we use a CursorLoader
         getActivity().startManagingCursor(cursor);
 
-        FlickrPhotoAdapter adapter = new FlickrPhotoAdapter(getActivity(), cursor);
+        adapter = new FlickrPhotoAdapter(getActivity(), cursor);
 
-        ListView lv =(ListView)view.findViewById(R.id.listView);
+        lv =(ListView)view.findViewById(R.id.listView);
         lv.setAdapter(adapter);
         lv.setOnItemClickListener(this);
 
         return view;
     }
+
+
 
 
     @Override
